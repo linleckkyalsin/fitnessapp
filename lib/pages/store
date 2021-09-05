@@ -1,0 +1,981 @@
+Expanded(
+                flex: 2,
+                child: Container(
+                  height: MediaQuery.of(context).size.height - 150.0,
+                                decoration: BoxDecoration(
+                                  color: kBackgroundColor,
+                                  borderRadius: BorderRadius.circular(40),
+                                ),
+                                padding: EdgeInsets.fromLTRB(
+                                    kDefaultPadding,
+                                    kDefaultPadding,
+                                    kDefaultPadding,
+                                    kDefaultPadding),
+                                margin: EdgeInsets.only(top: 0),
+                                child: SafeArea(
+                                  child: Column(
+                                    children: [
+                                      TitleBar(),
+                                      SizedBox(height: kDefaultPadding * 5),
+                                      Row(
+                                        children: [
+                                          Text(
+                                            'Recipes',
+                                            style: TextStyle(
+                                                fontSize: 24.0,
+                                                color: Colors.white),
+                                          ),
+                                        ],
+                                      ),
+                                      SizedBox(height: kDefaultPadding),
+                                      Text(
+                                        '1. Spread butter and jam\n'
+                                        '    Take two bread slices and spread jam on one and\n '
+                                        '   butter on another.\n'
+                                        '\n'
+                                        '2. Place the fruits\n'
+                                        '    Now slice the fruits as thinly as possible\n'
+                                        '    and properly spread on one bread slice.\n'
+                                        '    Sprinkle a pinch of salt to balance the flavours.\n'
+                                        '    Cover it with another bread slice.\n'
+                                        '\n'
+                                        '3. Ready to be served\n'
+                                        '   Your fruity sandwich is ready to be served.',
+                                        style: TextStyle(
+                                            fontSize: 18.0,
+                                            fontWeight: FontWeight.normal,
+                                            color: Colors.white),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+              ),
+              SizedBox(height: kDefaultPadding),
+                        Row(
+                          // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            NutritionInfo(),
+                          ],
+                        ),
+
+
+                        /**/
+                        /*Row(
+                            // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              NutritionInfo(),
+                             
+                            ],
+                          ),*/
+                       /*   Positioned(
+                          top: screenHeight *5 ,
+                          left: 0,
+                          right: 0,
+                          child: Container(
+                            child: Row(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Padding(
+                                    padding: const EdgeInsets.only(
+                                        left: 30, right: 48),
+                                    child: Text(
+                                      'Fats',
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold),
+                                    )),
+
+                                Padding(
+                                  padding: const EdgeInsets.only(
+                                      left: 8, right: 48),
+                                 child: Text(
+                                      'Protein',
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold),
+                                    )
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.only(
+                                      left: 8, right: 19),
+                                 child: Text(
+                                      'Carbon\n''hydrate',
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 17,
+                                          fontWeight: FontWeight.bold),
+                                    )
+                                ),
+                              ],
+                            ),
+                          )),*/
+
+
+                          /*/*
+
+               /*class MainPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    // ignore: unused_local_variable
+    Size size = MediaQuery.of(context).size;
+    // ignore: unused_local_variable
+    final screenHeight = MediaQuery.of(context).size.height;
+    return Column(children: [
+      Container(
+        height: size.height * 0.2,
+        child: Stack(
+          children: [
+            Container(
+              height: size.height * 02 - 27,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(36),
+                  bottomRight: Radius.circular(36),
+                ),
+                color: Colors.amber,
+              ),
+              /*child: Stack(
+                  children: [
+                    OpaqueImage(
+                      imageUrl: "assets/images/fruitsandwich.jpg",
+
+                    ),
+                    MyInfo(),
+                  ],
+                )*/
+            ),
+          ],
+        ),
+      )
+    ]);
+  }
+}*/
+/**/
+/*child:
+              Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+            AppBar(
+              backgroundColor: Colors.black12.withOpacity(.0),
+              elevation: 0.0,
+              leading: ElevatedButton(
+                onPressed: () {},
+                child: Icon(Icons.arrow_back_ios, color: Colors.white),
+                style: ElevatedButton.styleFrom(
+                    shape: CircleBorder(),
+                    padding: EdgeInsets.only(left: 20),
+                    primary: Colors.grey,
+                    onPrimary: Colors.white),
+              ),
+            ),
+            /* SizedBox(height: kDefaultPadding),
+                        Column(
+                          children: [
+                            Stack(
+                              children: [
+                                Container(
+                                  height: 250.0,
+                                  width: double.infinity,
+                                  child: CircleAvatar(),
+                                  decoration: BoxDecoration(
+                                    image: DecorationImage(
+                                      image: AssetImage(
+                                          'assets/images/fruitsandwich.jpg'),
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                                )
+                              ],
+                            )
+                          ],
+                        )*/
+          ]),*/
+/**/
+
+details.dart 
+import 'package:flutter/material.dart';
+
+import 'package:healthy_steps/constants.dart';
+import 'package:healthy_steps/pages/profile_page.dart';
+
+class DetailsScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+
+    return Scaffold(
+      body: Stack(
+        alignment: Alignment.topCenter,
+        children: [
+          Container(
+            margin: EdgeInsets.only(top: size.height * 0.2),
+            padding: EdgeInsets.only(top: size.height * 0.2),
+            height: size.height * 0.8,
+            child: SingleChildScrollView(
+              padding: EdgeInsets.fromLTRB(
+                  kDefaultPadding, 0, kDefaultPadding, kDefaultPadding),
+              child: SafeArea(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Text(
+                      'Fruit Sandwich',
+                      style: TextStyle(fontSize: 20, color: Colors.white),
+                    ),
+                    SizedBox(height: kDefaultPadding),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'Nutrition Info',
+                          style: TextStyle(color: Colors.white),
+                        ),
+                        ProfilePage(),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+/**/
+scrollingingredients.dart
+import 'package:flutter/material.dart';
+import 'package:healthy_steps/constants.dart';
+import 'package:healthy_steps/models/Category.dart';
+import 'package:healthy_steps/pages/lists.dart';
+
+class Bar extends StatelessWidget {
+  const Bar({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: kPrimaryColor,
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 10),
+          child: Column(
+            children: [
+              Container(
+                margin: EdgeInsets.only(top: 400),
+                  height: 500,
+                  child: ListView.builder(
+                      scrollDirection: Axis.horizontal,
+                      itemCount: demoCategories.length,
+                      itemBuilder: (context, index) {
+                        return CategoryCard(category: demoCategories[index]);
+                      })),
+            ],
+          ),
+        ),
+      ),
+    );
+
+    /* Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+      
+       Categories(name: 'Foods', icon: 'assets/images/fruitsandwich.jpg'),
+            Categories(name: 'Drinks', icon: 'assets/images/fruitsandwich.jpg'),
+            Categories(name: 'Fruits', icon: 'assets/images/fruitsandwich.jpg'),
+            Categories(name: 'Vegetables', icon: 'assets/images/fruitsandwich.jpg'),
+            Categories(name: 'Foods', icon: 'assets/images/fruitsandwich.jpg'),
+            Categories(name: 'Drinks', icon: 'assets/images/fruitsandwich.jpg'),
+            Categories(name: 'Fruits', icon: 'assets/images/fruitsandwich.jpg'),
+            Categories(name: 'Vegetables', icon: 'assets/images/fruitsandwich.jpg'),
+            
+
+      
+      ],
+    );*/
+  }
+}
+
+class CategoryCard extends StatelessWidget {
+  final Category category;
+  CategoryCard({required this.category});
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Container(
+          padding: EdgeInsets.all(1),
+          margin: EdgeInsets.only(top: 5, bottom: 2, right: 5, left: 8),
+          height: 40,
+          width: 40,
+          decoration: BoxDecoration(
+              color: Colors.white, borderRadius: BorderRadius.circular(11)),
+          child: Image.asset(category.icon),
+        ),
+        Text(
+          category.name,
+          style: Theme.of(context)
+              .textTheme
+              .subtitle2
+              ?.copyWith(fontWeight: FontWeight.bold, color: Colors.white),
+        )
+      ],
+    );
+  }
+}
+/**/
+profile_page.dart
+
+import 'package:flutter/material.dart';
+import 'package:healthy_steps/constants.dart';
+import 'package:healthy_steps/models/Category.dart';
+import 'package:healthy_steps/pages/lists.dart';
+
+class Bar extends StatelessWidget {
+  const Bar({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: kPrimaryColor,
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 10),
+          child: Column(
+            children: [
+              Container(
+                margin: EdgeInsets.only(top: 400),
+                  height: 500,
+                  child: ListView.builder(
+                      scrollDirection: Axis.horizontal,
+                      itemCount: demoCategories.length,
+                      itemBuilder: (context, index) {
+                        return CategoryCard(category: demoCategories[index]);
+                      })),
+            ],
+          ),
+        ),
+      ),
+    );
+
+    /* Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+      
+       Categories(name: 'Foods', icon: 'assets/images/fruitsandwich.jpg'),
+            Categories(name: 'Drinks', icon: 'assets/images/fruitsandwich.jpg'),
+            Categories(name: 'Fruits', icon: 'assets/images/fruitsandwich.jpg'),
+            Categories(name: 'Vegetables', icon: 'assets/images/fruitsandwich.jpg'),
+            Categories(name: 'Foods', icon: 'assets/images/fruitsandwich.jpg'),
+            Categories(name: 'Drinks', icon: 'assets/images/fruitsandwich.jpg'),
+            Categories(name: 'Fruits', icon: 'assets/images/fruitsandwich.jpg'),
+            Categories(name: 'Vegetables', icon: 'assets/images/fruitsandwich.jpg'),
+            
+
+      
+      ],
+    );*/
+  }
+}
+
+class CategoryCard extends StatelessWidget {
+  final Category category;
+  CategoryCard({required this.category});
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Container(
+          padding: EdgeInsets.all(1),
+          margin: EdgeInsets.only(top: 5, bottom: 2, right: 5, left: 8),
+          height: 40,
+          width: 40,
+          decoration: BoxDecoration(
+              color: Colors.white, borderRadius: BorderRadius.circular(11)),
+          child: Image.asset(category.icon),
+        ),
+        Text(
+          category.name,
+          style: Theme.of(context)
+              .textTheme
+              .subtitle2
+              ?.copyWith(fontWeight: FontWeight.bold, color: Colors.white),
+        )
+      ],
+    );
+  }
+}
+/*/
+category.dart
+import 'package:flutter/material.dart';
+
+
+class Categories extends StatefulWidget {
+  final String name;
+  final String icon;
+  Categories({required this.name, required this.icon});
+
+  @override
+  _CategoriesState createState() => _CategoriesState();
+}
+
+class _CategoriesState extends State<Categories> {
+  int selectedIndex = 0;
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Column(
+        children: [
+          Container(
+            width: 40,
+            height: 40,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(11),
+              color: Colors.white,
+            ),
+            child: Center(
+              child: Image.asset(
+               'assets/images/fruitsandwich.jpg',
+                width: 20,
+                height: 20,
+              ),
+            ),
+          ),
+          SizedBox(
+            height: 10.0,
+          ),
+          Text('blg blg',
+              style: TextStyle(
+                fontSize: 12.0,
+                fontWeight: FontWeight.w600,
+              ))
+        ],
+      ),
+    );
+  }
+}
+/*/
+List<Product> products = [
+  Product(
+    title: "Fruit Sandwich",
+    Calories: 266,
+    time: 10,
+    image: "assets/images/bag_1.png",
+  ),
+  Product(
+    title: "Belt Bag",
+    Calories: 234,
+    time: 8,
+    image: "assets/images/bag_2.png",
+  ),
+  Product(
+    title: "Hang Top",
+    Calories: 234,
+    time: 10,
+    image: "assets/images/bag_3.png",
+  ),
+  Product(
+    title: "Old Fashion",
+    Calories: 234,
+    time: 11,
+    image: "assets/images/bag_4.png",
+  ),
+  Product(
+    title: "Office Code",
+    Calories: 234,
+    time: 12,
+    image: "assets/images/bag_5.png",
+  ),
+  Product(
+    title: "Office Code",
+    Calories: 234,
+    time: 12,
+    image: "assets/images/bag_6.png",
+  ),
+];
+ Row(
+                children:[
+                  ...List.generate(products.length, (index) => Padding(padding: EdgeInsets.only(left: kDefaultPadding),
+                  child: CategoryCard(product: products[index],),),)
+                ]
+              )
+
+              Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              Padding(
+                                padding: EdgeInsets.all(17),
+                                child: AppBar(
+                                  backgroundColor:
+                                      Colors.black12.withOpacity(.0),
+                                  elevation: 0.0,
+                                  leading: ElevatedButton(
+                                    onPressed: () { Navigator.pop(context);},
+                                    child: Icon(Icons.arrow_back_ios,
+                                        color: Colors.white),
+                                    style: ElevatedButton.styleFrom(
+                                        shape: CircleBorder(),
+                                        padding: EdgeInsets.only(left: 12),
+                                        primary: Colors.grey,
+                                        onPrimary: Colors.white),
+                                  ),
+                                ),
+                              ),
+                             
+                            ]),
+                            /*/*/
+                            Skills
+
+                            import 'package:flutter/material.dart';
+import 'package:healthy_steps/FirstScreen/models/breakfast/food.dart';
+
+import 'package:healthy_steps/commons/radial_progress.dart';
+import '../../../constants.dart';
+
+class Skills extends StatelessWidget {
+  //final Product product;
+  const Skills({
+    Key? key, 
+    //required this.product,
+  }) : super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Padding(
+          padding: const EdgeInsets.symmetric(
+              vertical: kDefaultPadding, horizontal: kDefaultPadding),
+          child: Text(
+            'Nutrition Info',
+            style: TextStyle(color: Colors.white, fontSize: 20),
+          ),
+        ),
+        
+        Row(
+          
+          children: [
+            Expanded(
+              child: AnimatedCircularProgressIndicator(
+                percentage: 0.27,
+                label: "Fats",
+              ),
+            ),
+            SizedBox(width: kDefaultPadding),
+            Expanded(
+              child: AnimatedCircularProgressIndicator(
+                percentage: 0.18,
+                label: "Protein",
+              ),
+            ),
+            SizedBox(width: kDefaultPadding),
+            Expanded(
+              child: AnimatedCircularProgressIndicator(
+                percentage: 0.21,
+                label: 'Carbonhydrate',
+                
+              ),
+            ),
+          ],
+        ),
+      ],
+    );
+  }
+}
+/*import 'package:flutter/material.dart';
+import 'package:healthy_steps/commons/radial_progress.dart';
+import 'package:healthy_steps/commons/text.dart';
+import 'package:healthy_steps/constants.dart';
+class NutritionInfo extends StatelessWidget {
+  const NutritionInfo({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    final screenHeight = MediaQuery.of(context).size.height;
+    return Expanded(
+      child: SingleChildScrollView(
+        padding: EdgeInsets.fromLTRB(
+            kDefaultPadding, 0, kDefaultPadding, kDefaultPadding),
+        child: SafeArea(
+          child: Column(
+            //  mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                'Nutrition Info',
+                style: TextStyle(color: Colors.white,fontSize:20),
+              ),
+               AnimatedCircularProgressIndicator(percentage: 0.8, label: 'flutter'),
+               Skills(),
+      
+            /*  SizedBox(height: kDefaultPadding * 2),
+             Positioned(
+                  top: screenHeight * 0.38,
+                  left: 0,
+                  right: 0,
+                  child: Container(
+                    
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(left: 8, right: 48),
+                          child: RadialProgress(
+                              width: 4,
+                              child: Text(
+                                '50%',
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.bold),
+                              )),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 8, right: 48),
+                          child: RadialProgress(
+                            width: 4,
+                            child: Text(
+                              '34%',
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(left:8, right: 12),
+                          child: RadialProgress(
+                            width: 4,
+                            child: Text(
+                              '25%',
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  )),*/
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+*/
+Container(
+                margin: EdgeInsets.symmetric(
+                    horizontal: kDefaultPadding * 8,
+                    vertical: kDefaultPadding * 3),
+                child: Padding(
+                  padding: EdgeInsets.only(top: kDefaultPadding),
+                  child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          'Fruit Sandwich',
+                          style: TextStyle(fontSize: 20, color: Colors.white),
+                        ),
+                      ]),
+                ),
+              ),
+              /**/
+              children: [
+          Container(
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  Container(
+                    child: ClipPath(
+                      clipper: OvalBottomBorderClipper(),
+                      child: Container(
+                          height: 219.0,
+                          width: double.infinity,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              image:
+                                  AssetImage('assets/images/fruitsandwich.jpg'),
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                          child: Stack(clipBehavior: Clip.none, children: [
+                            Positioned(
+                                bottom: -20,
+                                left: 0,
+                                right: 0,
+                                child: Center(
+                                  child: Container(
+                                    clipBehavior: Clip.none,
+                                    width: 100,
+                                    height: 100,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(100),
+                                      image: DecorationImage(
+                                          image: AssetImage(
+                                              'assets/images/fruitsandwich')),
+                                    ),
+                                  ),
+                                ))
+                          ])),
+                    ),
+                  ),
+                  SizedBox(height: 25.0),
+                  Home(),
+                  SizedBox(height: kDefaultPadding),
+                  Skills(),
+                  SizedBox(height: 30.0),
+                  Container(
+                    width: double.infinity,
+                    height: MediaQuery.of(context).size.height - 82.0,
+                    decoration: BoxDecoration(
+                      color: kBackgroundColor,
+                      borderRadius: BorderRadius.circular(40),
+                    ),
+                    padding: EdgeInsets.fromLTRB(kDefaultPadding,
+                        kDefaultPadding, kDefaultPadding, kDefaultPadding),
+                    child: SafeArea(
+                      child: Column(
+                        children: [
+                          TitleBar(),
+                          SizedBox(height: kDefaultPadding),
+                          Container(
+                              height: 63,
+                              child: ListView.builder(
+                                  scrollDirection: Axis.horizontal,
+                                  itemCount: demoCategories.length,
+                                  itemBuilder: (context, index) {
+                                    return CategoryCard(
+                                        category: demoCategories[index]);
+                                  })),
+                          SizedBox(height: kDefaultPadding),
+                          Row(
+                            children: [
+                              Text(
+                                'Recipes',
+                                style: TextStyle(
+                                    fontSize: 24.0, color: Colors.white),
+                              ),
+                            ],
+                          ),
+                          SizedBox(height: kDefaultPadding),
+                          Text(
+                            '1. Spread butter and jam.Take two bread slices and spread jam on one and butter on another.\n'
+                            '\n'
+                            '2. Place the fruits.Now slice the fruits as thinly as possible and properly spread on one bread slice. Sprinkle a pinch of salt to balance the flavours.Cover it with another bread slice.\n'
+                            '\n'
+                            '3. Ready to be served.Your fruity sandwich is ready to be served.',
+                            maxLines: 10,
+                            style: TextStyle(
+                                height: 1.5,
+                                fontSize: 18.0,
+                                fontWeight: FontWeight.normal,
+                                color: Colors.white),
+                          ),
+                        ],
+                      ),
+                    ),
+                  )
+                ],
+              ),
+            ),
+          ),
+        ],
+        /**/new CircularPercentIndicator(
+              radius: 70.0,
+              lineWidth: 13.0,
+              animation: true,
+              percent: 0.27,
+              center: new Text(
+                "27 %",
+                style:
+                    new TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0),
+              ),
+              footer: new Text(
+                "Fats",
+                style:
+                    new TextStyle(fontWeight: FontWeight.bold, fontSize: 17.0),
+              ),
+              circularStrokeCap: CircularStrokeCap.round,
+              progressColor: kRedColor,
+            ),
+            new Padding(
+              padding: EdgeInsets.symmetric(horizontal: kDefaultPadding * 2),
+            ),
+            new CircularPercentIndicator(
+              radius: 70.0,
+              lineWidth: 13.0,
+              animation: true,
+              percent: 0.18,
+              center: new Text(
+                "18 %",
+                style:
+                    new TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0),
+              ),
+              footer: new Text(
+                "Protein",
+                style:
+                    new TextStyle(fontWeight: FontWeight.bold, fontSize: 17.0),
+              ),
+              circularStrokeCap: CircularStrokeCap.round,
+              progressColor: kRedColor,
+            ),
+            new CircularPercentIndicator(
+              radius: 70.0,
+              lineWidth: 13.0,
+              animation: true,
+              percent: 0.21,
+              center: new Text(
+                "21 %",
+                style:
+                    new TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0),
+              ),
+              footer: new Text(
+                "Carbon\n" "hydrate",
+                style:
+                    new TextStyle(fontWeight: FontWeight.bold, fontSize: 17.0),
+              ),
+              circularStrokeCap: CircularStrokeCap.round,
+              progressColor: kRedColor,
+            ),
+            /*/
+            Container(
+                    child: ClipPath(
+                      clipper: OvalBottomBorderClipper(),
+                      child: Container(
+                          height: 219.0,
+                          width: double.infinity,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              image:
+                                  AssetImage('assets/images/fruitsandwich.jpg'),
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                          child: Stack(clipBehavior: Clip.none, children: [
+                            Positioned(
+                                bottom: -20,
+                                left: 0,
+                                right: 0,
+                                child: Center(
+                                  child: Container(
+                                    clipBehavior: Clip.none,
+                                    width: 100,
+                                    height: 100,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(100),
+                                      image: DecorationImage(
+                                          image: AssetImage(
+                                              'assets/images/fruitsandwich')),
+                                    ),
+                                  ),
+                                ))
+                          ])),
+                    ),
+                  ),
+
+                  /**/ new CircularPercentIndicator(
+                  radius: 60.0,
+                  lineWidth: 4.0,
+                  percent: 0.27,
+                  center: new Text("27%",style: TextStyle(color: Colors.white,fontWeight:FontWeight.bold)),
+                  progressColor: kRedColor,
+                  
+                ),
+                
+                
+              
+                new Padding(
+                  padding: EdgeInsets.symmetric(horizontal: kDefaultPadding*2),
+                ),
+                
+                
+                new CircularPercentIndicator(
+                  radius: 60.0,
+                  lineWidth: 4.0,
+                  percent: 0.18,
+                  center: new Text("18%",style: TextStyle(color: Colors.white,fontWeight:FontWeight.bold)),
+                  progressColor: kRedColor,
+                ),
+               
+                new Padding(
+                  padding: EdgeInsets.symmetric(horizontal: kDefaultPadding*2),
+                ),
+                new CircularPercentIndicator(
+                  radius: 60.0,
+                  lineWidth: 4.0,
+                  percent: 0.21,
+                  center: new Text("21%",style: TextStyle(color: Colors.white,fontWeight:FontWeight.bold)),
+                  progressColor: kRedColor,
+                ),
+
+                /*/
+                Container(
+                    child: ClipPath(
+                      clipper: OvalBottomBorderClipper(),
+                      child: Container(
+                          height: 219.0,
+                          width: double.infinity,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              image:
+                                  AssetImage('assets/images/sand.jpg'),
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                          child: Stack(clipBehavior: Clip.none, children: [
+                            Positioned(
+                                bottom: -20,
+                                left: 0,
+                                right: 0,
+                                child: Center(
+                                  child: Container(
+                                    clipBehavior: Clip.none,
+                                    width: 100,
+                                    height: 100,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(100),
+                                      image: DecorationImage(
+                                          image: AssetImage(
+                                              'assets/images/fruitsandwich')),
+                                    ),
+                                  ),
+                                )),
+                                Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              Padding(
+                                padding: EdgeInsets.all(17),
+                                child: AppBar(
+                                  backgroundColor:
+                                      Colors.black12.withOpacity(.0),
+                                  elevation: 0.0,
+                                  leading: ElevatedButton(
+                                    onPressed: () { Navigator.pop(context);},
+                                    child: Icon(Icons.arrow_back_ios,
+                                        color: Colors.white),
+                                    style: ElevatedButton.styleFrom(
+                                        shape: CircleBorder(),
+                                        padding: EdgeInsets.only(left: 12),
+                                        primary: Colors.grey,
+                                        onPrimary: Colors.white),
+                                  ),
+                                ),
+                              ),
+                             
+                            ]),
+                          ])),
+                    ),
+                  ),
