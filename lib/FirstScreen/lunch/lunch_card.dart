@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:healthy_steps/FirstScreen/lunch/lunch.dart';
-import 'package:healthy_steps/FirstScreen/models/breakfast/categories.dart';
-import 'package:healthy_steps/pages/lists.dart';
+
 
 import '../../constants.dart';
 
