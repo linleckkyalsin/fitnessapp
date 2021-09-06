@@ -1,8 +1,8 @@
-import 'package:flutter/material.dart';
+/*import 'package:flutter/material.dart';
 import 'package:healthy_steps/FirstScreen/models/breakfast/food.dart';
 
 import '../../../constants.dart';
-import 'lists.dart';
+
 
 class Name extends StatefulWidget {
  final Product product;
@@ -23,7 +23,7 @@ class _NameState extends State<Name> {
         height: 35,
         child: ListView.builder(
             scrollDirection: Axis.horizontal,
-            itemCount: demoCategories.length,
+            itemCount: ingredients.length,
             itemBuilder: (BuildContext context, int index) {
               return GestureDetector(
                 onTap: () {
@@ -55,3 +55,4 @@ class _NameState extends State<Name> {
     );
   }
 }
+*/

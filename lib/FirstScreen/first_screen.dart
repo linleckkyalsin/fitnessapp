@@ -1,21 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:healthy_steps/FirstScreen/dinner/dinner.dart';
+
 import 'package:healthy_steps/FirstScreen/lunch/category.dart';
 import 'package:healthy_steps/constants.dart';
-import 'package:healthy_steps/pages/lists.dart';
 
-import 'models/breakfast/category_card.dart';
+
+
 
 import 'dinner/dinner_categories.dart';
 import 'models/breakfast/categories.dart';
-import 'models/breakfast/food.dart';
+
 
 class FirstScreen extends StatelessWidget {
   const FirstScreen({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context) { 
+    // ignore: unused_local_variable
+    Size size = MediaQuery.of(context).size;
+    // ignore: unused_local_variable
+    final screenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
       backgroundColor: kPrimaryColor,
       body: SingleChildScrollView(
@@ -148,11 +152,16 @@ class FirstScreen extends StatelessWidget {
               SizedBox(height: kDefaultPadding * 4),
               DinnerCategories(),
 
-              
+              Hero(tag:'hihi',
+          child: Image.asset('images/realfruitsandwich.jpg',height: size.height*0.4,
+          fit:BoxFit.fitHeight),
+          
+          )
             ],
           ),
         ),
       ),
+      
     );
   }
 }

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:healthy_steps/pages/start.dart';
+
 
 import '../../../constants.dart';
 import 'category_card.dart';

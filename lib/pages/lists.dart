@@ -15,5 +15,5 @@ List<Category> demoCategories = [
   Category( name:  'Kiwi', icon: 'images/kiwi.jpg'),
   Category( name: 'Banana', icon: 'images/banana.jpg'),
  
- 
+
 ];

@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
+
 //import 'package:healthy_steps/Screens/details/details.dart';
 import 'package:healthy_steps/constants.dart';
 
 import 'package:healthy_steps/pages/my_info.dart';
 
 
-import 'package:healthy_steps/pages/start.dart';
-
-import 'FirstScreen/first_screen.dart';
 
 void main() {
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  var product;
+
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
         primaryColor: kBackgroundColor,
         scaffoldBackgroundColor: kPrimaryColor,
       ),
-      home:FirstScreen(),
+      home:MyInfo(),
      
     
     );

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:healthy_steps/pages/lists.dart';
-import 'categories.dart';
+
 
 import '../../../constants.dart';
 import 'food.dart';
@@ -70,7 +69,7 @@ class LunchCategoryCard extends StatelessWidget {
                           Icon(Icons.local_fire_department_rounded,
                               size: 18, color: Colors.orange),
                           SizedBox(width: 10),
-                          Text('${product.Calories} Cal',
+                          Text('${product.calories} Cal',
                               style:
                                   TextStyle(color: Colors.white, fontSize: 12)),
                         ],
