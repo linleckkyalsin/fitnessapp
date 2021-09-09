@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:healthy_steps/FirstScreen/first_screen.dart';
 
 //import 'package:healthy_steps/Screens/details/details.dart';
 import 'package:healthy_steps/constants.dart';
+import 'package:healthy_steps/pages/indredients.dart';
 
 import 'package:healthy_steps/pages/my_info.dart';
+
+import 'FirstScreen/models/breakfast/food.dart';
 
 
 
@@ -17,6 +21,8 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    var category;
+    var index;
     return MaterialApp(
       title: 'Healthy Steps',
       theme: ThemeData(
@@ -32,7 +38,7 @@ class MyApp extends StatelessWidget {
         primaryColor: kBackgroundColor,
         scaffoldBackgroundColor: kPrimaryColor,
       ),
-      home:MyInfo(),
+      home:FirstScreen(),
      
     
     );

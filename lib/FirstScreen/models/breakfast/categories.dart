@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-
+import 'package:healthy_steps/pages/lists.dart';
+import 'package:healthy_steps/pages/my_info.dart';
 
 import '../../../constants.dart';
 import 'category_card.dart';
@@ -10,6 +11,8 @@ class Categories extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var product;
+    var category;
     return SingleChildScrollView(
       clipBehavior: Clip.none,
       scrollDirection: Axis.horizontal,
@@ -18,7 +21,13 @@ class Categories extends StatelessWidget {
           products.length,
           (index) => Padding(
             padding: EdgeInsets.only(left: kDefaultPadding),
-           child:LunchCategoryCard(product: products[index]),
+            child: LunchCategoryCard(
+              product: products[index],
+              onTap: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => MyInfo(product: product))),
+            ),
           ),
         ),
       ]),

@@ -1,12 +1,14 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:healthy_steps/FirstScreen/models/breakfast/food.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
 import '../constants.dart';
 
 class Skills extends StatelessWidget {
+  final Product product;
   const Skills({
-    Key? key,
+    Key? key, required this.product,
    // required this.percentage,
 // required this.label,
   }) : super(key: key);
@@ -32,9 +34,9 @@ class Skills extends StatelessWidget {
              radius: 60.0,
               lineWidth: 4.0,
               animation: true,
-              percent: 0.27,
+              percent: product.percent1,
               center: new Text(
-                "27 %",
+                   '${product.pertext1} %',
                 style:
                     new TextStyle(color: Colors.white,fontWeight:FontWeight.bold)
               ),
@@ -55,9 +57,9 @@ class Skills extends StatelessWidget {
               radius: 60.0,
               lineWidth: 4.0,
               animation: true,
-              percent: 0.18,
+              percent: product.percent2,
               center: new Text(
-                "18 %",
+                   '${product.pertext2} %',
                 style:
                     new TextStyle(color: Colors.white,fontWeight:FontWeight.bold)
               ),
@@ -76,9 +78,9 @@ class Skills extends StatelessWidget {
               radius: 60.0,
               lineWidth: 4.0,
               animation: true,
-              percent: 0.21,
+              percent:product.percent3,
               center: new Text(
-                "21 %",
+              '${product.pertext3} %',
                 style:
                     new TextStyle(color: Colors.white,fontWeight:FontWeight.bold)
               ),
@@ -95,18 +97,5 @@ class Skills extends StatelessWidget {
        
       ],
     );
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
   }
 }

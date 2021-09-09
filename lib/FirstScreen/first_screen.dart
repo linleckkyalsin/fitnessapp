@@ -27,7 +27,7 @@ class FirstScreen extends StatelessWidget {
           child: Column(
             children: [
               Container(
-                height: 200.0,
+                height: 250.0,
                 width: double.infinity,
                 decoration: BoxDecoration(
                   image: DecorationImage(
@@ -39,7 +39,7 @@ class FirstScreen extends StatelessWidget {
                   children: [
                     Positioned(
                       left: 30,
-                      top: 44,
+                      top: 66,
                       child: Text(
                         'Healthy Diet Meals',
                         style: TextStyle(
@@ -50,7 +50,7 @@ class FirstScreen extends StatelessWidget {
                     ),
                     Positioned(
                       left: 30,
-                      top: 90,
+                      top: 112,
                       child: Text(
                         'Learn simple ways to prepare food. \n'
                         'Keep meals preparation easy,eat more  \n'
@@ -152,11 +152,7 @@ class FirstScreen extends StatelessWidget {
               SizedBox(height: kDefaultPadding * 4),
               DinnerCategories(),
 
-              Hero(tag:'hihi',
-          child: Image.asset('images/realfruitsandwich.jpg',height: size.height*0.4,
-          fit:BoxFit.fitHeight),
-          
-          )
+              
             ],
           ),
         ),

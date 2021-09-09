@@ -1,8 +1,9 @@
-import 'dart:html';
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
+import 'package:healthy_steps/FirstScreen/lunch/lunch.dart';
+
+import 'package:healthy_steps/FirstScreen/models/breakfast/food.dart';
 
 import 'package:healthy_steps/commons/text.dart';
 import 'package:healthy_steps/constants.dart';
@@ -10,15 +11,23 @@ import 'package:healthy_steps/constants.dart';
 import 'package:healthy_steps/screens/details/components/title_bar.dart';
 
 import 'lists.dart';
-// @dart=2.9
 
 class MyInfo extends StatelessWidget {
+  final Product product;
+
+
+  const MyInfo({
+
+    Key? key,
+    required this.product,var category,
+  }) : super(key: key);
   @override
   Widget build(BuildContext context) {
     // ignore: unused_local_variable
     Size size = MediaQuery.of(context).size;
     // ignore: unused_local_variable
     final screenHeight = MediaQuery.of(context).size.height;
+    var index;
     return Scaffold(
       body: SingleChildScrollView(
         clipBehavior: Clip.none,
@@ -32,7 +41,7 @@ class MyInfo extends StatelessWidget {
                   bottom: Radius.elliptical(
                       MediaQuery.of(context).size.width, 200.0)),
               image: DecorationImage(
-                image: AssetImage('images/sand.jpg'),
+                image: AssetImage(product.bgimage),
                 fit: BoxFit.cover,
               ),
             ),
@@ -50,8 +59,7 @@ class MyInfo extends StatelessWidget {
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(80),
                             image: DecorationImage(
-                                image:
-                                    AssetImage('images/realfruitsandwich.jpg'),
+                                image: AssetImage(product.image),
                                 fit: BoxFit.cover)),
                       ),
                     )),
@@ -69,7 +77,7 @@ class MyInfo extends StatelessWidget {
                         style: ElevatedButton.styleFrom(
                             shape: CircleBorder(),
                             padding: EdgeInsets.only(left: 12),
-                            primary: Colors.grey,
+                            primary: Color(0x0000004D),
                             onPrimary: Colors.white),
                       ),
                     ),
@@ -80,15 +88,15 @@ class MyInfo extends StatelessWidget {
           )),
           SizedBox(height: 40),
           Text(
-            'Fruit Sandwich',
+            product.title,
             style: TextStyle(fontSize: 20, color: Colors.white),
           ),
           SizedBox(height: kDefaultPadding),
-          Skills(),
+          Skills(product: product),
           SizedBox(height: 30.0),
           Container(
             width: double.infinity,
-            height: MediaQuery.of(context).size.height - 82.0,
+            height: MediaQuery.of(context).size.height,
             decoration: BoxDecoration(
               color: kBackgroundColor,
               borderRadius: BorderRadius.circular(40),
@@ -120,11 +128,7 @@ class MyInfo extends StatelessWidget {
                   ),
                   SizedBox(height: kDefaultPadding),
                   Text(
-                    '1. Spread butter and jam.Take two bread slices and spread jam on one and butter on another.\n'
-                    '\n'
-                    '2. Place the fruits.Now slice the fruits as thinly as possible and properly spread on one bread slice. Sprinkle a pinch of salt to balance the flavours.Cover it with another bread slice.\n'
-                    '\n'
-                    '3. Ready to be served.Your fruity sandwich is ready to be served.',
+                    product.description,
                     style: TextStyle(
                         height: 1.5,
                         fontSize: 18.0,
@@ -141,8 +145,14 @@ class MyInfo extends StatelessWidget {
   }
 }
 
+class DemoProduct {
+ 
+}
+
 class CategoryCard extends StatelessWidget {
   final Category category;
+
+  var index;
   CategoryCard({required this.category});
 
   @override
